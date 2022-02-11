@@ -1,27 +1,26 @@
 
 function fn_submit(){
-	var f = document.frm;
-	
-	if(f.sno.value == null || f.sno.value == ""){
-		alert("학번을 입력해주세요!");
-		f.sno.focus(); return false;
+	var f = document.frm;	
+	var score = [f.ekor,f.emath,f.eeng,f.ehist];
+	var scorecheck = ["국어","수학","영어","역사"];
+	for(var i=0; i<score.length; i++){		
+		if(f.sno.value === null || f.sno.value === "" || f.sno.value.length > 5 || f.sno.value.length < 5){
+			alert("학번을 확인해주세요!");
+			f.sno.value = null;
+			f.sno.focus();
+			return false;
+		}
+		if(score[i].value === null || score[i].value === "" || score[i].value > 100 || score[i].value < 0){
+			alert(scorecheck[i]+" 점수를 확인해주세요!");
+			score[i].value = null;
+			score[i].focus();
+			return false;
+		}
 	}
-	if(f.ekor.value == null || f.ekor.value == ""){
-		alert("국어점수를 입력해주세요!");
-		f.ekor.focus(); return false;
-	}
-	if(f.emath.value == null || f.emath.value == ""){
-		alert("수학점수를 입력해주세요!");
-		f.emath.focus(); return false;
-	}
-	if(f.eeng.value == null || f.eeng.value == ""){
-		alert("영어점수를 입력해주세요!");
-		f.eeng.focus(); return false;
-	}
-	if(f.ehist.value == null || f.ehist.value == ""){
-		alert("역사점수를 입력해주세요!");
-		f.ehist.focus(); return false;
-	}
-	
 	f.submit();
+}
+
+function fn_reset(){
+	alert("정보를 지우고 다시 작성하겠습니다.");
+	location='studentWrite.jsp';
 }

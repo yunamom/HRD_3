@@ -15,8 +15,11 @@ String ehist = request.getParameter("ehist");
 
 //유효성체크 
 String check[] = {"sno","ekor","emath","eeng","ehist"};
+int s = 0; //변수생성
 for(String value:check){
-	if(value == null || value.equals("")){
+	int score = (s==0)?0:(Integer.parseInt(value)); //유효성추가 점수가 0이하 거나 100이상이면 이전화면으로 돌려보낸다.
+	if(value == null || value.equals("") || score < 0 || score > 100){
+		s++;
 	%>
 		<script>
 		alert("입력화면을 확인해주세요.");
@@ -39,6 +42,20 @@ if(cnt == 0){ //학생목록에 해당학생번호가 없을때
 	%>
 	<script>
 	alert("학생번호를 확인해주세요.\n 존재하지 않는 학생입니다.");
+	location='studentWrite.jsp';
+	</script>
+	<%
+		return;
+}
+String sql2 = " SELECT count(*)cnt FROM exam_tbl_03 WHERE sno = "+sno+" ";
+
+rs = stmt.executeQuery(sql2);
+rs.next();
+cnt = rs.getInt("cnt");
+if(cnt > 0){ //이미 입력된 학생일때 
+	%>
+	<script>
+	alert("이미 입력된 학생입니다.");
 	location='studentWrite.jsp';
 	</script>
 	<%
