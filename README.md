@@ -24,7 +24,11 @@
 
 11. script.js - 유효성체크
 
-<img width="993" alt="Screen Shot 2022-02-11 at 9 26 49 PM" src="https://user-images.githubusercontent.com/91236026/153591282-fa7e400e-0bb9-4c0b-a1f1-4c9e3180589c.png">
-<img width="915" alt="Screen Shot 2022-02-11 at 3 30 23 PM" src="https://user-images.githubusercontent.com/91236026/153590704-98b493a3-579e-4bae-907c-13c7e6b28fb0.png">
+
 <img width="915" alt="Screen Shot 2022-02-11 at 3 30 14 PM" src="https://user-images.githubusercontent.com/91236026/153590726-5930fc16-1d71-453f-8259-0749e8b347be.png">
+<img width="915" alt="Screen Shot 2022-02-11 at 3 30 23 PM" src="https://user-images.githubusercontent.com/91236026/153590704-98b493a3-579e-4bae-907c-13c7e6b28fb0.png">
+<img width="993" alt="Screen Shot 2022-02-11 at 9 26 49 PM" src="https://user-images.githubusercontent.com/91236026/153591282-fa7e400e-0bb9-4c0b-a1f1-4c9e3180589c.png">
+<img width="923" alt="Screen Shot 2022-02-12 at 1 13 39 AM" src="https://user-images.githubusercontent.com/91236026/153627448-d5f91832-e4a4-4b56-bd8c-3496b496b7ea.png">
+
+
 
