@@ -28,7 +28,6 @@ ResultSet rs = stmt.executeQuery(sql);
 <head>
 <meta charset="UTF-8">
 <title>＊학생목록＊</title>
-
 </head>
 <body>
 <%@ include file="topmenu.jsp" %>
@@ -37,7 +36,7 @@ ResultSet rs = stmt.executeQuery(sql);
 	<h2>＊학생목록＊</h2>
 </div>
 <div class="box">
-	<table width="650px">
+	<table style="width:650px">
 		<tr>
 			<th>학번</th>
 			<th>이름</th>
@@ -48,10 +47,16 @@ ResultSet rs = stmt.executeQuery(sql);
 			<th>전화번호</th>
 			<th>주소</th>
 		</tr>
-		<%while(rs.next()){ %>
+		<%while(rs.next()){ 
+		String sno=rs.getString("sno");
+		String sname=rs.getString("sname");
+		%>
 		<tr>
-			<td><%=rs.getString("sno")%></td>
-			<td><%=rs.getString("sname")%></td>
+			<td><%=sno%></td>
+			<td>
+			<a style="padding:0.2em" href="modify.jsp?sno=<%=sno%>&&sname=<%=sname%>">
+			<%=rs.getString("sname")%>
+			</a></td>
 			<td><%=rs.getString("sno1")%></td>
 			<td><%=rs.getString("sno2")%></td>
 			<td><%=rs.getString("sno3")%></td>
